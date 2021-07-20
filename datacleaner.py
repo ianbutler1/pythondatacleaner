@@ -1,7 +1,19 @@
 #Ian Butler
 
 
-#Explanation of this program: This program reads in a file of a team's roster, it creates a new list that is empty and then strips all the tags from the data WITHOUT modifying the original file, the original file is then closed. As it strips the tags it adds the data to a list so it is easily ready. After creating the list containing the data WITH the XML tags removes it calculates how many players are on the roster. After doing that it creates a new file that can be written to called "TeamnameRoster.txt" for example, if the original file was called Broncos.txt is would create a new file called BroncosRsoter.txt. Once the file is created it removes the first element from the list (since this is ALWWAYS a blank element). Then the list is iterated over to see if there are any other whitespaces, these are then removed. It then writes the first sentence to the file using the first element (which is the team name) and the number of players on the roster. After the first sentence is written it begins swapping the elements in the list. It puts the list in a order so the elements can easily be added to form the correct sentences. It first swaps the jersey number and the player's first name and last name to make the list go in the order of ["FIRST NAME", "LAST NAME", JERSEY NUMBER","HEIGHT", "WEIGHT", "AGE", "POSITION", "SCHOOL"] it then swaps the "POSITION" element until it is in the correct order, this is done because the elements are now in corresponding order they are in the senteces. Next it deals with the height element. It splits it from ["5-11"] to ["5", "11"] because in the sentence it would be 5 foot 11 so the "-" has to be removed. Once this is done it begins writing the sentences to the file, it goes through the list and since it is in the correct order it plugs the element into the sentece. The file is then closed.
+#Explanation of this program: This program reads in a file of a team's roster, it creates a new list that is empty and then strips all the tags from the data 
+#WITHOUT modifying the original file, the original file is then closed. As it strips the tags it adds the data to a list so it is easily ready. 
+#After creating the list containing the data WITH the XML tags removes it calculates how many players are on the roster. After doing that it creates a new 
+#file that can be written to called "TeamnameRoster.txt" for example, if the original file was called Broncos.txt is would create a new file called 
+#BroncosRsoter.txt. Once the file is created it removes the first element from the list (since this is ALWWAYS a blank element). 
+#Then the list is iterated over to see if there are any other whitespaces, these are then removed. 
+#It then writes the first sentence to the file using the first element (which is the team name) and the number of players on the roster. 
+#After the first sentence is written it begins swapping the elements in the list. It puts the list in a order so the elements can easily be added to form the 
+#correct sentences. It first swaps the jersey number and the player's first name and last name to make the list go in the order of 
+#["FIRST NAME", "LAST NAME", JERSEY NUMBER","HEIGHT", "WEIGHT", "AGE", "POSITION", "SCHOOL"] it then swaps the "POSITION" element until it is in the correct order,
+# this is done because the elements are now in corresponding order they are in the senteces. Next it deals with the height element. It splits it from ["5-11"] 
+# to ["5", "11"] because in the sentence it would be 5 foot 11 so the "-" has to be removed. Once this is done it begins writing the sentences to the file, 
+# it goes through the list and since it is in the correct order it plugs the element into the sentece. The file is then closed.
 def summarizeData(filename):
     #Opens the specified file name and reads it.
     fr = open(filename, 'r')
