@@ -1,0 +1,15 @@
+<team> 
+<name>Buffalo Bills</name>
+<players>
+<player>
+<jno>50</jno>
+<fname>Zaire</fname>
+<lname>Anderson</lname>
+<height>5-11</height>
+<weight>220</weight>
+<age>24</age>
+<position>ILB</position>
+<school>Nebraska</school>
+</player>
+</players>
+</team>
